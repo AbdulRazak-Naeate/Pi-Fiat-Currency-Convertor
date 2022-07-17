@@ -95,7 +95,7 @@ return ()=>{
                    
           </Grid>
                  <Typography variant='h6'>{`Pi Value  ${formarttoCurrency(fiat)}  `}</Typography>
-        <Grid item  justifyContent='space-around'  direction={'column'}>
+        <Grid container  justifyContent='space-around'  direction={'column'}>
         <Grid item xs={8} sm={8} md={8} lg={8} className='inputs'>
         <TextField
           id="local-fiat"
