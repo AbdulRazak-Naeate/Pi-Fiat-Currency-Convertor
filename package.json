@@ -20,7 +20,7 @@
   "scripts": {
     "start": "node server -p $PORT",
     "server": "node-env-run server --exec nodemon | pino-colada",
-    "build": "cd client && npm intall && npm run build"
+    "build": "cd client && npm install && npm run build"
   },
   "engines": {
     "node": "v16.13.0",
