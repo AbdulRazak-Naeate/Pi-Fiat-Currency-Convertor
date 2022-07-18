@@ -29,7 +29,7 @@ function App() {
     }
     useEffect(()=>{
         if (!areRatesLoaded){
-        axios.get('http://localhost:3004/api/rates').then(response=>{
+        axios.get('/api/rates').then(response=>{
 
           //console.log(response.data.rates)
           setRates(response.data.rates);
