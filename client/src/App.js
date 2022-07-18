@@ -1,13 +1,10 @@
-/* import logo from './logo.svg';
- */import { Grid, Typography} from '@mui/material';
+import { Grid, Typography} from '@mui/material';
 import {EmailOutlined} from '@mui/icons-material'
 import {useState,useEffect} from 'react';
 import axios  from 'axios';
 import './App.css';
 import ExchangeRates from './components/exchangeRates/ExchangeRates'
 import Appbar from './components/appbar/Appbar';
-/* import CurrencyLTableList from './components/currenciesRatesTable/CurrencyLTableList'; */
-import {data,currencies} from './data.js';
 
 function App() {
   const[pGCV,setPiGCV]=useState(314159);
