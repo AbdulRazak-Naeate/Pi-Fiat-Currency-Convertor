@@ -6,6 +6,8 @@ import './App.css';
 import ExchangeRates from './components/exchangeRates/ExchangeRates'
 import Appbar from './components/appbar/Appbar';
 
+import {data,currencies} from './data.js';
+
 function App() {
   const[pGCV,setPiGCV]=useState(314159);
   const[areRatesLoaded,setAreRatesLoaded]=useState(false);
