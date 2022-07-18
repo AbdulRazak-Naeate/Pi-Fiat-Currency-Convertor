@@ -30,9 +30,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "node server -p $PORT",
-    "server": "node-env-run server --exec nodemon | pino-colada",    "build": "cd client && npm intall && npm run build"
-
+    "start": "react-scripts start",
+    "build": "react-scripts build"
   },
   "engines": {
     "node": "v16.13.0",

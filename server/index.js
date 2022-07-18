@@ -14,7 +14,7 @@ const ratesRoute         = require('./routes/rates');
 
 dotenv.config();
 
-const indexPath  = path.resolve(__dirname, '../build', 'index.html');
+const indexPath  = path.resolve(__dirname, '..client/build', 'index.html');
 const whitelist = ['http://localhost:3000',"http://localhost:3002", 'http://localhost:8080', 'https://currencyapi.net']
 
 const corsOptions = {
@@ -42,7 +42,7 @@ app.use(pino);
 app.get('/wake-up', (req, res) => res.json('👌'))
 
 //Route MiddleWares
-app.use(express.static('build'));
+app.use(express.static('client/build'));
 app.use('/api/rates',    ratesRoute);
  
 
