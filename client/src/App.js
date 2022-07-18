@@ -61,7 +61,7 @@ function App() {
          </Grid>
         </Grid>
       <div className="info">
-        <Typography variant='body2' color={'MenuText'}>Pi Global Consensus Value </Typography>
+        {/* <Typography variant='body2' color={'MenuText'}>Pi Global Consensus Value </Typography> */}
          <Typography variant='body1' color={'red'} >@AbdulRazakNaeate</Typography>  
          <Typography variant="body2" color={'red'}> <a  href='mailto:abdulrazakneate@gmail.com'><EmailOutlined fontSize='small'className='topbarinfoIcon'/></a></Typography>
       </div>

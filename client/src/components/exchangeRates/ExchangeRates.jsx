@@ -32,16 +32,17 @@ const ExchangeRates = ({rates,data,currencies,pGCV,setPiGCV,formarttoCurrency}) 
   };
 
   const SelectComponent =({fiat,rates})=>{
-    return ( <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
+    return ( <FormControl sx={{ m: 1, minWidth: 220,alignItems:'center' }} size="small" >
     <InputLabel id="demo-select-small">Select Fiat currency</InputLabel>
     <Select
       labelId="currency-select-small"
       id="currency-select-small" 
       size="small"
       margin ="dense"
+      fullWidth
       type="number"
       value={fiat} 
-      label="Fiat Currency"
+      label="Select Fiat currency"
       onChange={handleChange}
     >
       <MenuItem value={fiat}>
@@ -90,7 +91,7 @@ return ()=>{
        
         <Grid container justifyContent='space-between' direction={'column'} spacing={1} /*  xs={12} sm={12} md={12} lg={12} */ >
            
-       <Grid item xs={8} sm={8} md={3} lg={3}>
+       <Grid item xs={8} sm={8} md={8} lg={8}>
        <SelectComponent rates={rates} fiat={fiat}/>
                    
           </Grid>
