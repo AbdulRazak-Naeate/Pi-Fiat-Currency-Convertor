@@ -5,37 +5,38 @@ import './exchange-rate.css';
 
 const ExchangeRates = ({rates,data,currencies,pGCV,setPiGCV,formarttoCurrency}) => {
 
-    const[fiat,setfiat]=useState(0);
     /*const[pGCVinGHS,setPiGCVinGHS]=useState(pGCV*fiat);
     const[pGCVinNGN,setPiGCVinNGN]=useState(pGCV*fiat); */
-    const[results,setResults]=useState(0);
-    //const[fiatEnteredvalue,setEnteredfiatValue]=useState();
-   
+
+    const[fiat,setfiat]=useState(0);
     const[tmprates]=useState(data.rates);
     const[tmpcurrencies]=useState(currencies.currencies);
-    const[fiatValue,setFiatValue]=useState()
+    const[productValue,setProductValue]=useState()
     const[fiatLabel,setFiatLabel]=useState('')
     const[restructobj,setRestrucBoj]=useState(false);
-   
+     const[results,setResults]=useState(0);
+
 
   const onLocalfiatInputChange =(e)=>{
 
-      var fiatvalue= e.target.value;
-          setFiatValue(fiatvalue);
-      var res=convert(fiatvalue,fiat);
+      var productvalue= e.target.value;
+          setProductValue(productvalue);
+      var res=convert(productvalue,fiat);
       setResults(res.toFixed(8))
   }
-  const convert =(fiatvalue,fiat)=>{
-    return fiatvalue/fiat
+  const convert =(productvalue,fiat)=>{
+    return productvalue/fiat
   }
  
   const handleChange = (event) => {   
       setfiat(event.target.value);
       setFiatLabel(event.target.name);
-      console.log(event)
+      console.log(productValue)
  
-   if (fiatValue>0){ var res=convert(fiatValue,fiat);
-    setResults(res.toFixed(8))}
+   if(productValue !== undefined){ 
+    var res=convert(productValue,fiat);
+    setResults(res.toFixed(8))
+  }
   };
 
   const SelectComponent =({fiat,rates})=>{
