@@ -67,7 +67,7 @@ const options={ useNewUrlParser: true ,useUnifiedTopology: true,useCreateIndex:t
         // console.log("node env : "+process.env.NODE_ENV)
 
         // Serve any static files
-        app.use(express.static(path.resolve(__dirname, '../build')));
+        app.use(express.static(path.resolve(__dirname, '..client/build')));
         
       // Handle React routing, return all requests to React app
         app.get('/*', async(req, res)=> {
@@ -81,13 +81,12 @@ const options={ useNewUrlParser: true ,useUnifiedTopology: true,useCreateIndex:t
 
              } 
            //console.log(product)
-             htmlData=htmlData.replace("<title>React App</title>",`<title>Pi Fiat Currency Convertor</title>`)
-             .replace('__META_OG_TITLE__','Pi Fiat Currency Convertor')
+            /*  htmlData=htmlData.replace('__META_OG_TITLE__','Pi Fiat Currency Convertor')
              .replace('__META_OG_DESCRIPTION__',"Convert you local Fiat currency to Pi Currency")
              .replace('__META_DESCRIPTION__','Convert you local Fiat currency to Pi Currency')
              .replace('__META_OG_URL__',``)
              .replace('__META_URL__',``)
-             .replace('__META_OG_IMAGE__','')
+             .replace('__META_OG_IMAGE__','') */
               //console.log(htmlData);
              res.send(htmlData)
              /*  fs.writeFileSync(indexPath,htmlData,{encoding:'utf8',flag:'w'}) */
