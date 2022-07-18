@@ -15,7 +15,7 @@ function App() {
 
   const formarttoCurrency = (amount)=>{
     var value=0;
-    var symbol='$'
+    var symbol=''
   if (amount!==undefined){
     if (amount>=1){
   
@@ -46,7 +46,7 @@ function App() {
       <br/>
       <Grid item xs={3} sm={4} md={6} lg={6}  justifyContent='space-between'>  
         <Typography variant='h5' fontWeight={600} color={'MenuText'}>Pi Global Consensus Value </Typography>
-         <Typography variant='h4'  fontWeight={600} color={'red'} >{`${formarttoCurrency(pGCV)}`}</Typography>
+         <Typography variant='h4'  fontWeight={600} color={'red'} >{`$${formarttoCurrency(pGCV)}`}</Typography>
         </Grid> 
         
          <Grid container justifyContent={'space-between'}>
@@ -62,7 +62,7 @@ function App() {
       <div className="info">
         {/* <Typography variant='body2' color={'MenuText'}>Pi Global Consensus Value </Typography> */}
          <Typography variant='body1' color={'red'} >@AbdulRazakNaeate</Typography>  
-         <Typography variant="body2" color={'red'}> <a  href='mailto:abdulrazakneate@gmail.com'><EmailOutlined fontSize='small'className='topbarinfoIcon'/></a></Typography>
+         <Typography variant="body2" > <a  href='mailto:abdulrazakneate@gmail.com'><EmailOutlined fontSize='small'className='topbarinfoIcon'/></a></Typography>
       </div>
        
             {/*   <CurrencyLTableList/>

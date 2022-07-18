@@ -13,22 +13,29 @@ const ExchangeRates = ({rates,data,currencies,pGCV,setPiGCV,formarttoCurrency}) 
    
     const[tmprates]=useState(data.rates);
     const[tmpcurrencies]=useState(currencies.currencies);
-
+    const[fiatValue,setFiatValue]=useState()
+    const[fiatLabel,setFiatLabel]=useState('')
     const[restructobj,setRestrucBoj]=useState(false);
    
 
   const onLocalfiatInputChange =(e)=>{
 
       var fiatvalue= e.target.value;
+          setFiatValue(fiatvalue);
       var res=convert(fiatvalue,fiat);
       setResults(res.toFixed(8))
   }
   const convert =(fiatvalue,fiat)=>{
     return fiatvalue/fiat
   }
-
-  const handleChange = (event) => {
-    setfiat(event.target.value);
+ 
+  const handleChange = (event) => {   
+      setfiat(event.target.value);
+      setFiatLabel(event.target.name);
+      console.log(event)
+ 
+   if (fiatValue>0){ var res=convert(fiatValue,fiat);
+    setResults(res.toFixed(8))}
   };
 
   const SelectComponent =({fiat,rates})=>{
@@ -42,7 +49,8 @@ const ExchangeRates = ({rates,data,currencies,pGCV,setPiGCV,formarttoCurrency}) 
       fullWidth
       type="number"
       value={fiat} 
-      label="Select Fiat currency"
+      name={fiatLabel}
+      label="Select currency"
       onChange={handleChange}
     >
       <MenuItem value={fiat}>
@@ -51,7 +59,7 @@ const ExchangeRates = ({rates,data,currencies,pGCV,setPiGCV,formarttoCurrency}) 
       {
        rates!== undefined ? 
         rates.map((rate,index)=>(
-         <MenuItem key={index} value={(rate.value)*pGCV}>{`${rate.name} ${rate.country } `}</MenuItem>
+         <MenuItem key={index} name={rate.name}  value={(rate.value)*pGCV}>{`${rate.name} ${rate.country } `}</MenuItem>
          
       )):'' 
     }
@@ -95,7 +103,7 @@ return ()=>{
        <SelectComponent rates={rates} fiat={fiat}/>
                    
           </Grid>
-                 <Typography variant='h6'>{`Pi Value  ${formarttoCurrency(fiat)}  `}</Typography>
+                 <Typography variant='h6'>{`${fiatLabel} Value  ${formarttoCurrency(fiat)}  `}</Typography>
         <Grid container  justifyContent='space-around'  direction={'column'}>
         <Grid item xs={8} sm={8} md={8} lg={8} className='inputs'>
         <TextField
