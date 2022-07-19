@@ -3,7 +3,7 @@ import React,{useState,useEffect} from 'react';
 import './exchange-rate.css';
 
 
-const ExchangeRates = ({rates,data,currencies,pGCV,setPiGCV,formarttoCurrency}) => {
+const ExchangeRates = ({/* rates, */data,currencies,pGCV,setPiGCV,formarttoCurrency}) => {
 
     /*const[pGCVinGHS,setPiGCVinGHS]=useState(pGCV*fiat);
     const[pGCVinNGN,setPiGCVinNGN]=useState(pGCV*fiat); */
@@ -15,6 +15,7 @@ const ExchangeRates = ({rates,data,currencies,pGCV,setPiGCV,formarttoCurrency}) 
     const[fiatLabel,setFiatLabel]=useState('')
     const[restructobj,setRestrucBoj]=useState(false);
      const[results,setResults]=useState(0);
+     const[rates,setRates]=useState([]);
 
 
   const onLocalfiatInputChange =(e)=>{
@@ -86,7 +87,7 @@ const ExchangeRates = ({rates,data,currencies,pGCV,setPiGCV,formarttoCurrency}) 
   return arrRates
 }
   if (!restructobj){
-    //setRates(restructureObject(tmprates,tmpcurrencies));
+  setRates(restructureObject(tmprates,tmpcurrencies));
 
   }  
   //console.log("rate : "+ JSON.stringify(rates))

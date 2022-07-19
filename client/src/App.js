@@ -1,7 +1,7 @@
 import { Grid, Typography} from '@mui/material';
 import {EmailOutlined} from '@mui/icons-material'
 import {useState,useEffect} from 'react';
-import axios  from 'axios';
+//import axios  from 'axios';
 import './App.css';
 import ExchangeRates from './components/exchangeRates/ExchangeRates'
 import Appbar from './components/appbar/Appbar';
@@ -10,7 +10,7 @@ import {data,currencies} from './data.js';
 
 function App() {
   const[pGCV,setPiGCV]=useState(314159);
-  const[areRatesLoaded,setAreRatesLoaded]=useState(false);
+  //const[areRatesLoaded,setAreRatesLoaded]=useState(false);
   const[rates,setRates]=useState([]);
 
   const formarttoCurrency = (amount)=>{
@@ -27,7 +27,7 @@ function App() {
     return value
     }
     useEffect(()=>{
-        if (!areRatesLoaded){
+       /*  if (!areRatesLoaded){
         axios.get('/api/rates').then(response=>{
 
           //console.log(response.data.rates)
@@ -37,7 +37,7 @@ function App() {
         }
       return ()=>{
         setAreRatesLoaded(true);
-      }
+      } */
     })
     
   return (
