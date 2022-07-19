@@ -52,7 +52,8 @@ function App() {
          <Grid container justifyContent={'space-between'}>
 
         <Grid item xs={12} sm={12} md={12} lg={12}  alignItems='center'>
-        <Typography style={{marinTop:'2vh'}} variant='body2' color={'GrayText'} >The app uses real time currency rates from currencypi.net to make the conversion </Typography>
+        <Typography style={{marinTop:'2vh'}} variant='body2' color={'GrayText'} >The app uses static  currency rates (a week old ) for now  to make the conversion as request  from currencypi.net its exhausted </Typography>
+     {/*    <Typography style={{marinTop:'2vh'}} variant='body2' color={'GrayText'} >The app uses real time currency rates from currencypi.net to make the conversion </Typography> */}
       
         
      {   rates ?  <ExchangeRates rates={rates} data={data} currencies={currencies} pGCV={pGCV} setPiGCV={setPiGCV} formarttoCurrency={formarttoCurrency} />:''
