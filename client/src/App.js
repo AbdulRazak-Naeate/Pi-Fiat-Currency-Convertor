@@ -63,7 +63,7 @@ function App() {
       <div className="info">
         {/* <Typography variant='body2' color={'MenuText'}>Pi Global Consensus Value </Typography> */}
          <Typography variant='body1' color={'red'} >@AbdulRazakNaeate</Typography>  
-         <Typography variant="body2" > <a  href='mailto:naeatestudio@gmail.com'><EmailOutlined fontSize='small'className='topbarinfoIcon'/></a></Typography>
+         <Typography variant="body2" > <a  href='mailto:naeatestudios@gmail.com'><EmailOutlined fontSize='small'className='topbarinfoIcon'/></a></Typography>
       </div>
        
             {/*   <CurrencyLTableList/>
