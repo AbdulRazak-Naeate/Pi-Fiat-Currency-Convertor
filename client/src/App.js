@@ -52,7 +52,7 @@ function App() {
          <Grid container justifyContent={'space-between'}>
 
         <Grid item xs={12} sm={12} md={12} lg={12}  alignItems='center'>
-        <Typography style={{marinTop:'2vh'}} variant='body2' color={'GrayText'} >The app uses static  currency rates (a week old ) for now  to make the conversion as request  from currencypi.net its exhausted </Typography>
+        <Typography style={{marinTop:'2vh'}} variant='body2' color={'GrayText'} >The app uses static  currency rates for now  to make the conversion as request  from currencypi.net its exhausted,will be fixed soon </Typography>
      {/*    <Typography style={{marinTop:'2vh'}} variant='body2' color={'GrayText'} >The app uses real time currency rates from currencypi.net to make the conversion </Typography> */}
       
         
@@ -63,7 +63,7 @@ function App() {
       <div className="info">
         {/* <Typography variant='body2' color={'MenuText'}>Pi Global Consensus Value </Typography> */}
          <Typography variant='body1' color={'red'} >@AbdulRazakNaeate</Typography>  
-         <Typography variant="body2" > <a  href='mailto:abdulrazakneate@gmail.com'><EmailOutlined fontSize='small'className='topbarinfoIcon'/></a></Typography>
+         <Typography variant="body2" > <a  href='mailto:naeatestudio@gmail.com'><EmailOutlined fontSize='small'className='topbarinfoIcon'/></a></Typography>
       </div>
        
             {/*   <CurrencyLTableList/>
